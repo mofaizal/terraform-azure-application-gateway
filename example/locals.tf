@@ -6,4 +6,10 @@ locals {
   resource_group_name     = "app-rg"
   location = "West Europe"
 
+
+vnet_name                                = ["hub-environment"]
+vnet_address                             = ["10.90.0.0/16"]
+subnet_names                             = ["frontend","backend"]
+subnet_range                             = ["10.90.0.0/24","10.90.1.0/24"]
+subnet_count                             = 2
 }
