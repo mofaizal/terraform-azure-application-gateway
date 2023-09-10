@@ -11,7 +11,7 @@ name                = lower("vnet-${var.vnet_name[count.index]}")
 address_space        = [element(var.vnet_address, count.index)]  # Use element to get the address space
 location            = var.region
 resource_group_name = var.resource_group_name
-
+ depends_on = [azurerm_resource_group.resource_group]
 }
 
 resource "azurerm_subnet" "subnet" {
@@ -21,4 +21,15 @@ resource "azurerm_subnet" "subnet" {
   resource_group_name       = var.resource_group_name
   address_prefixes          = [var.subnet_range[count.index]]
 
+}
+
+
+resource "azurerm_public_ip" "public_ip" {
+  name                = lower("${var.app_gateway_name}-gw-pip")
+  location            = var.region
+  resource_group_name = var.resource_group_name
+  allocation_method   = var.public_ip_allocation_method
+  sku                 = var.public_ip_sku_tier 
+
+  depends_on = [azurerm_resource_group.resource_group]
 }

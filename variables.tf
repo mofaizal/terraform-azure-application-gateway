@@ -42,3 +42,24 @@ variable subnet_names {
 variable subnet_range {
   type=list
 }
+
+# Variable declaration for the  public  ip sku and allocation method
+variable   {
+
+}
+
+
+# Variable declaration for the  public  ip sku and allocation method
+variable public_ip_sku_tier  {
+
+}
+
+# Variable declaration for the  application gateway sku
+variable app_gateway_name_tier  {
+
+}
+
+# Variable declaration for the  application gateway name
+variable app_gateway_name  {
+
+} 

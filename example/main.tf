@@ -15,5 +15,9 @@ module "application-gateway" {
     subnet_count                            = local.subnet_count
     subnet_names                            = local.subnet_names
     subnet_range                            = local.subnet_range
+    public_ip_allocation_method             = local.public_ip_allocation_method
+    public_ip_sku_tier                      = local.public_ip_sku_tier
+    app_gateway_name_tier                   = local.app_gateway_name_tier
+    app_gateway_name                        = local.app_gateway_name
 }
 
