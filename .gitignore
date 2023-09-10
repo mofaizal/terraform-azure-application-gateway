@@ -4,6 +4,14 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
+*.tfstate
+*/.terraform/*
+*.terraform*
+*.tfstate.*
+**/.terraform/*
+*.hcl
+**/.terraform.lock.hcl
+**/.deployment/*
 
 # Crash log files
 crash.log
