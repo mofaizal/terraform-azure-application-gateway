@@ -2,7 +2,7 @@
 
 module "application-gateway" {
   source  = "mofaizal/application-gateway/azure"
-  version = "1.0.1"
+  version = "1.0.2"
 # source = "../"
   # Resources/Service Enable or Disable 
     rg_enable                                = local.rg_enable

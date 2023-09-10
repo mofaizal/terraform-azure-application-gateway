@@ -44,7 +44,7 @@ variable subnet_range {
 }
 
 # Variable declaration for the  public  ip sku and allocation method
-variable   {
+variable public_ip_allocation_method  {
 
 }
 
