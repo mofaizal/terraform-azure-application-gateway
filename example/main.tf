@@ -1,9 +1,9 @@
 
 
 module "application-gateway" {
-#   source  = "mofaizal/application-gateway/azure"
-#   version = "1.0.0"
-source = "../"
+  source  = "mofaizal/application-gateway/azure"
+  version = "1.0.1"
+# source = "../"
   # Resources/Service Enable or Disable 
     rg_enable                                = local.rg_enable
     # Parameter Definition for the Azure Network Foundation components
